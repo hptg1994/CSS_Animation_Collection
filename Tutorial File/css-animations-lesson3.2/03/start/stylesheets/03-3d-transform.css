@@ -1,0 +1,24 @@
+.centered {
+    transform-style: preserve3d;
+    /* z轴的深度 */
+    perspective: 1050px;
+}
+
+.demo {
+    background: #3991AE;
+    color: #fff;
+    font-size: 4rem;
+    padding: 2rem 3rem;
+    position: relative;
+    text-align: center;
+    /* 初始-90度 */
+    transform: rotateX(-90deg);
+    animation: no-transform 1s .5s cubic-bezier(0, .1, .5, 1.5) forwards;
+}
+
+@keyframes no-transform {
+    100% {
+      /* Animate to what ever transform you have to transform none */
+      transform: none;
+    }
+}

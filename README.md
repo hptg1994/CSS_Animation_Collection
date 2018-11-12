@@ -89,3 +89,42 @@ Code:
 }
 ```
 
+
+
+## Keyframes
+
+While a transition might help us move one state to another, keyframes go further and give us a tool to create animations that go through as many different states as we need them to. Keyframe animations can also play automatically, this means they don't rely on a change of state.
+
+```css
+@keyframes mymove {
+	0%   {top: 0px;}
+	50%  {top: 100px;}
+	100% {top: 0px;}
+}
+```
+
+It starts with the `@keyframes` keyword, that tells us, and the browser, that we're creating a series of keyframes, followed by the name of this set of keyframes. Then, inside the outer most curly braces, we define our keyframes.
+
+```css
+div {
+    animation: mymove 2s 1s ease-out forwards;
+}
+```
+
+First we have the name (`mymove`) - this is the name we used for the keyframes earlier.
+
+Next we say how long an animation will run for; in this case 2 seconds, this is the duration.
+
+After we set the duration, we then specify delay. This means that the animation won't start straight away, but instead will wait one second before starting to run through the sequence of keyframes. We then specify a transition timing-function, in this case "ease-out". Again, we'll go into what these are all about later.
+
+Lastly, we specify something called "fill-mode". This is how we tell the browser, whether to revert to the original styles of the element after the animation has completed, or whether the end state of the keyframes, is the style we want to apply. This is set to "forwards", which means that we want the final keyframe, which is usually defined as 100%, to be the style that sticks around after the animation finishes.
+
+
+
+## Timing
+
+- First, we have "ease". Ease is the default, and it makes animations begin a little slowly, speed up, and then decelerate toward the end. It's a little like ease-in-out, except the ease-in part at the beginning of the movement is less pronounced.
+- Next, we have "ease-in" and "ease-out". Ease-in is when an animation begins slowly and speeds up toward the end. Ease-out is the opposite; it starts fast and slows down toward the end. Combining these together, we have "ease-in-out". This both starts and ends slowly.
+- Then we have "linear". This is the most computery of the animations. It moves from the beginning to the end in a robotic, unchanging pace.
+- Then we have "steps". Steps is a function that breaks the animation into a series of discrete stages, with no tweening between each of the steps. Steps timing function lets you divide a transition into as many individual steps as needed. It's useful for stop-motion animations, like a cartoon, by being made up of individual frames put together to create the impression of movement. Twitter famously used this for the fave animation, in which they animated an image sprite made up of individual frames.
+- Lastly, there's my favorite, cubic-bezier. Most of the timing-function presets are themselves cubic-bezier curves. A cubic-bezier curve is a curve made by defining two points. The curve represents the rate of change from the beginning to the end of the animation. We'll talk about this more, as there are tools we can use to create cubic-bezier curves to save doing the math by hand.
