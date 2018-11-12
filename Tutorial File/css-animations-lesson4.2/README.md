@@ -116,3 +116,7 @@ linear {
 
 I urge you to experiment with it. See what different curves do to your animations, and find ways they can make your animation stand out from the crowd.
 
+
+
+## Transition vs Animations
+

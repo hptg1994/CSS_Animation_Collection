@@ -11,8 +11,7 @@
   margin: 2rem 0;
   width: 8rem;
 }
-
-@-webkit-keyframes left-to-right {
+ @-webkit-keyframes left-to-right {
   0%, 10% {
     -webkit-transform: none;
             transform: none;
@@ -26,8 +25,7 @@
             transform: none;
   }
 }
-
-@keyframes left-to-right {
+ @keyframes left-to-right {
   0%, 10% {
     -webkit-transform: none;
             transform: none;
@@ -41,41 +39,38 @@
             transform: none;
   }
 }
-
-.linear {
-
+ .linear {
+  -webkit-animation-timing-function: cubic-bezier(0,0,1,1);
+          animation-timing-function: cubic-bezier(0,0,1,1);
 }
-
-.ease-in {
-
+ .ease-in {
+  -webkit-animation-timing-function: cubic-bezier(1,0,1,1);
+          animation-timing-function: cubic-bezier(1,0,1,1);
 }
-
-.ease-out {
-
+ .ease-out {
+  -webkit-animation-timing-function: cubic-bezier(0,1,1,1);
+          animation-timing-function: cubic-bezier(0,1,1,1);
 }
-
-.ease-in-out {
-
+ .ease-in-out {
+  -webkit-animation-timing-function: cubic-bezier(1,0,0,1);
+          animation-timing-function: cubic-bezier(1,0,0,1);
 }
-
-.custom-1 {
-
+ .custom-1 {
+  -webkit-animation-timing-function: cubic-bezier(0,.9,.5,1.4);
+          animation-timing-function: cubic-bezier(0,.9,.5,1.4);
 }
-
-.custom-2 {
-
+ .custom-2 {
+  -webkit-animation-timing-function: cubic-bezier(.3,1.5,.7,-0.5);
+          animation-timing-function: cubic-bezier(.3,1.5,.7,-0.5);
 }
-
-h2, h3 {
+ h2, h3 {
   font-weight: normal;
   margin-top: 2rem;
   text-align: left;
 }
-
-h2 {
+ h2 {
   font-size: 4rem;
 }
-
-h3 {
+ h3 {
   font-size: 2rem;
-}
+} 

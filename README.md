@@ -135,3 +135,13 @@ Lastly, we specify something called **"fill-mode"**. This is how we tell the bro
 - Then we have "linear". This is the most computery of the animations. It moves from the beginning to the end in a robotic, unchanging pace.
 - Then we have "steps". Steps is a function that breaks the animation into a series of discrete stages, with no tweening between each of the steps. Steps timing function lets you divide a transition into as many individual steps as needed. It's useful for stop-motion animations, like a cartoon, by being made up of individual frames put together to create the impression of movement. Twitter famously used this for the fave animation, in which they animated an image sprite made up of individual frames.
 - Lastly, there's my favorite, cubic-bezier. Most of the timing-function presets are themselves cubic-bezier curves. A cubic-bezier curve is a curve made by defining two points. The curve represents the rate of change from the beginning to the end of the animation. We'll talk about this more, as there are tools we can use to create cubic-bezier curves to save doing the math by hand.
+
+## Cubic Bezier curves
+
+​	Open a tool I'd like to use to create cubic-bezier curves, the website [cubic-bezier.com](http://cubic-bezier.com). There are many tools around for creating cubic-bezier curves but this is one of my favorite. It's just a handy way to create the numbers we'll use in our CSS.
+
+​	On the left, we have a graph with a red and blue handle, these are the cubic-bezier points. The graph shows how an animation progresses over time, with time being the x-axis and progression being the y-axis. The shape on the black line is the speed at which the animation proceeds. The steeper this is, the faster the animation moves. Pressing "go" beside the "Preview and Compare" heading allows us to see how this compares to other animation timing functions.
+
+
+
+https://stackoverflow.com/questions/35942247/how-to-move-placeholder-to-top-on-focus-and-while-typing
