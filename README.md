@@ -1,4 +1,4 @@
-### Transitions - From A to B
+## Transitions - From A to B
 
 The `transition` property is made up of four parts. 
 
@@ -23,18 +23,20 @@ Code that do this:
   left: 50%; 
   position: absolute; // A B这两个字母是absolute的位置
   top: 50%;
+  // transition property and we want to affect the transform property
   transition: transform .4s ease-out; // 动画的启动对象
 }
 
 /* Container A */
 .demo-letter1 {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  // 因为上面absolute x 的50%的位置过头了，所以要回来-50%
+  -webkit-transform: translate(-50%, -50%); 
+          transform: translate(-50%, -50%);  
 }
 
-/* Container A */
+/* Container B */
 .demo-letter2 {
-  -webkit-transform: translate(-50%, 200%);
+  -webkit-transform: translate(-50%, 200%); // B字母的y轴则在初始状态200%向上让他消失
           transform: translate(-50%, 200%);
 }
 
