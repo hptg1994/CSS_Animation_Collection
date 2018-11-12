@@ -10,7 +10,8 @@ What this transition means is "when any animatable property changes, wait for on
 
 The `ease-out` part of the definition, in this case, means to start fast and then gradually decelerate toward the end of the 2 seconds.
 
-Example:
+**Example 1:**
+
 <center>
 	<img src="./Resources/trasition.gif" width="70%" />
 </center>
@@ -50,6 +51,41 @@ Code that do this:
 .demo:hover .demo-letter2 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+```
+
+
+
+**Example 2:**
+<center>
+	<img src="./Resources/input-transition.gif" width="70%" />
+</center>
+Code:
+
+```css
+.demo-input {
+  background: #eee;
+  border: 4px solid #aaa;
+  font-size: 4rem;
+  padding: 1rem;
+  -webkit-transition: border .2s ease-out, background .4s ease-out;
+  //每一个property和他们对应各自的效果
+  transition: border .2s ease-out, background .4s ease-out; 
+}
+
+.demo-input:focus {
+  background: #fff;
+  border: 4px solid #3991AE;
+}
+
+// Jquery控制，当输错时变红
+.demo-input.invalid {
+  border:4px solid red;
+}
+
+// Jquery控制，当正确时变绿
+.demo-input.valid {
+  border:4px solid green;
 }
 ```
 
