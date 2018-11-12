@@ -91,7 +91,7 @@ Code:
 
 
 
-## Keyframes
+## Keyframes + Animation
 
 While a transition might help us move one state to another, keyframes go further and give us a tool to create animations that go through as many different states as we need them to. Keyframe animations can also play automatically, this means they don't rely on a change of state.
 
@@ -113,16 +113,23 @@ div {
 
 First we have the name (`mymove`) - this is the name we used for the keyframes earlier.
 
-Next we say how long an animation will run for; in this case 2 seconds, this is the duration.
+**animation-duration:**
 
-After we set the duration, we then specify delay. This means that the animation won't start straight away, but instead will wait one second before starting to run through the sequence of keyframes. We then specify a transition timing-function, in this case "ease-out". Again, we'll go into what these are all about later.
+Next we say how long an animation will run for; in this case 2 seconds, this is the **duration**.
 
-Lastly, we specify something called "fill-mode". This is how we tell the browser, whether to revert to the original styles of the element after the animation has completed, or whether the end state of the keyframes, is the style we want to apply. This is set to "forwards", which means that we want the final keyframe, which is usually defined as 100%, to be the style that sticks around after the animation finishes.
+**animation-delay:**
+
+After we set the duration, we then specify **delay**. This means that the animation won't start straight away, but instead will wait one second before starting to run through the sequence of keyframes. We then specify a transition **timing-function**, in this case "ease-out". Again, we'll go into what these are all about later.
+
+**animation-iteration-count:  animation-fill-mode:**
+
+Lastly, we specify something called **"fill-mode"**. This is how we tell the browser, whether to revert to the original styles of the element after the animation has completed, or whether the end state of the keyframes, is the style we want to apply. This is set to "forwards", which means that we want the final keyframe, which is usually defined as 100%, to be the style that sticks around after the animation finishes.
 
 
 
-## Timing
+## Timing:
 
+- **animation-timing-function**
 - First, we have "ease". Ease is the default, and it makes animations begin a little slowly, speed up, and then decelerate toward the end. It's a little like ease-in-out, except the ease-in part at the beginning of the movement is less pronounced.
 - Next, we have "ease-in" and "ease-out". Ease-in is when an animation begins slowly and speeds up toward the end. Ease-out is the opposite; it starts fast and slows down toward the end. Combining these together, we have "ease-in-out". This both starts and ends slowly.
 - Then we have "linear". This is the most computery of the animations. It moves from the beginning to the end in a robotic, unchanging pace.
